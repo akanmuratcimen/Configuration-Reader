@@ -1,0 +1,28 @@
+﻿@model EditViewModel
+
+<div asp-validation-summary="All"></div>
+
+<form asp-controller="Home" asp-action="Edit" method="post">
+  <table id="edit-configuration">
+    <tr>
+      <td>application name</td>
+      <td><input asp-for="ApplicationName" /></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td><input asp-for="Name" /></td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td><input asp-for="Value" /></td>
+    </tr>
+    <tr>
+      <td>is active</td>
+      <td><input asp-for="IsActive" /></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button type="submit">update</button></td>
+    </tr>
+  </table>
+</form>

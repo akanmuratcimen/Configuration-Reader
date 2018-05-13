@@ -1,0 +1,35 @@
+﻿@model IndexViewModel
+
+<div id="create-new-configuration">
+  <a asp-controller="Home" asp-action="Create" target="_blank">
+    create new configuration
+  </a>
+</div>
+
+<table id="configurations">
+  <thead>
+    <tr>
+      <td>id</td>
+      <td>application name</td>
+      <td>name</td>
+      <td>value</td>
+      <td>is active</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var configuration in Model.Configurations) {
+      <tr>
+        <td>@configuration.Id</td>
+        <td>@configuration.ApplicationName</td>
+        <td>@configuration.Name</td>
+        <td>@configuration.Value</td>
+        <td>@configuration.IsActive</td>
+        <td>
+          <a asp-controller="Home" asp-action="Edit" 
+               asp-route-id="@configuration.Id" target="_blank">edit</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

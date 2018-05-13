@@ -1,0 +1,5 @@
+﻿{
+  "ApplicationName": "TestApp",
+  "ConnectionString": "mongodb://127.0.01:27017/ConfigurationReader?Collection=Configuration",
+  "RefreshTimerIntervalInMs": 3000
+}
